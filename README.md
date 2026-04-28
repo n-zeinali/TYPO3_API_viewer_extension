@@ -9,7 +9,7 @@ Built as a learning project to demonstrate core TYPO3 development concepts.
 ## � Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/frontend-screenshot.png" width="45%" />
+  <img src="docs/screenshots/frontend-list-screenshot.png" width="45%" />
   <img src="docs/screenshots/backend-setup-screenshot.png" width="45%" />
 </p>
 
