@@ -8,9 +8,10 @@ Built as a learning project to demonstrate core TYPO3 development concepts.
 
 ## � Screenshots
 
-![API Viewer frontend screenshot](docs/screenshots/Screenshot from 2026-04-28 15-22-35.png)
-
-![Backend plugin setup screenshot](docs/screenshots/Screenshot from 2026-04-28 15-22-47.png)
+<p align="center">
+  <img src="docs/screenshots/frontend-screenshot.png" width="45%" />
+  <img src="ocs/screenshots/backend-setup-screenshot.png" width="45%" />
+</p>
 
 ---
 
