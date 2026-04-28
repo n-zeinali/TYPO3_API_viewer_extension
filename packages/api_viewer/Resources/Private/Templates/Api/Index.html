@@ -1,0 +1,87 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:layout name="Default" />
+
+<f:section name="main">
+<div class="api-viewer">
+
+    <!-- Show heading if editor typed one -->
+    <f:if condition="{heading}">
+        <h2 class="api-viewer__heading">{heading}</h2>
+    </f:if>
+
+    <!-- Show error message if something went wrong -->
+    <f:if condition="{error}">
+        <div class="api-viewer__error">
+            ⚠️ {error}
+        </div>
+    </f:if>
+
+    <!-- Show the list of items from the API -->
+    <f:if condition="{items}">
+        <ul class="api-viewer__list">
+            <f:for each="{items}" as="item">
+                <li class="api-viewer__item">
+
+                    <!-- REST Countries API -->
+                    <f:if condition="{item.name.common}">
+                        <f:then>
+                            <div class="api-viewer__country">
+                                <span class="api-viewer__flag">
+                                    {item.flag}
+                                </span>
+                                <div class="api-viewer__info">
+                                    <strong>{item.name.common}</strong>
+                                    <f:if condition="{item.capital.0}">
+                                        <span>🏙 {item.capital.0}</span>
+                                    </f:if>
+                                    <f:if condition="{item.population}">
+                                        <span>👥 
+                                            <f:format.number>
+                                                {item.population}
+                                            </f:format.number>
+                                        </span>
+                                    </f:if>
+                                    <f:if condition="{item.region}">
+                                        <span>🌍 {item.region}</span>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </f:then>
+
+                        <!-- Generic API fallback (JSONPlaceholder etc) -->
+                        <f:else>
+                            <div class="api-viewer__generic">
+                                <f:if condition="{item.title}">
+                                    <strong>
+                                        #{item.id} {item.title}
+                                    </strong>
+                                </f:if>
+                                <f:if condition="{item.body}">
+                                    <p>{item.body}</p>
+                                </f:if>
+                                <f:if condition="{item.name}">
+                                    <strong>{item.name}</strong>
+                                </f:if>
+                                <f:if condition="{item.email}">
+                                    <span>✉️ {item.email}</span>
+                                </f:if>
+                            </div>
+                        </f:else>
+                    </f:if>
+
+                </li>
+            </f:for>
+        </ul>
+
+        <!-- Show the API source link at the bottom -->
+        <p class="api-viewer__source">
+            Source: {apiUrl}
+        </p>
+    </f:if>
+
+</div>
+</f:section>
+</html>

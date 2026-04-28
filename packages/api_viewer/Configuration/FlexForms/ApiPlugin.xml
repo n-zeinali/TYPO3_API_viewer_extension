@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>API Settings</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.apiUrl>
+                        <label>API URL</label>
+                        <config>
+                            <type>input</type>
+                            <size>50</size>
+                        </config>
+                    </settings.apiUrl>
+                    <settings.itemLimit>
+                        <label>Number of items</label>
+                        <config>
+                            <type>number</type>
+                            <default>10</default>
+                        </config>
+                    </settings.itemLimit>
+                    <settings.heading>
+                        <label>Heading</label>
+                        <config>
+                            <type>input</type>
+                            <size>40</size>
+                        </config>
+                    </settings.heading>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
